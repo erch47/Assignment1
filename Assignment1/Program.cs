@@ -22,7 +22,7 @@
                         double num1 = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Enter second number: ");
                         double num2 = Convert.ToDouble(Console.ReadLine());
-                        string add = string.Format("{0} + {1} = {2}", num1, num2, Addition(num1, num2));
+                        string add = string.Format("{0} + {1} = {2}", num1, num2, Calc.Addition(num1, num2));
                         Console.WriteLine(add);
                         Console.WriteLine("Press any key to continue");
                         Console.ReadKey();
@@ -33,7 +33,7 @@
                         double num3 = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Enter second number: ");
                         double num4 = Convert.ToDouble(Console.ReadLine());
-                        string subtract = string.Format("{0} - {1} = {2}", num3, num4, Subtraction(num3, num4));
+                        string subtract = string.Format("{0} - {1} = {2}", num3, num4, Calc.Subtraction(num3, num4));
                         Console.WriteLine(subtract);
                         Console.WriteLine("Press any key to continue");
                         Console.ReadKey();
@@ -44,7 +44,7 @@
                         double num5 = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Enter second number: ");
                         double num6 = Convert.ToDouble(Console.ReadLine());
-                        string multiply = string.Format("{0} * {1} = {2}", num5, num6, Multiplication(num5, num6));
+                        string multiply = string.Format("{0} * {1} = {2}", num5, num6, Calc.Multiplication(num5, num6));
                         Console.WriteLine(multiply);
                         Console.WriteLine("Press any key to continue");
                         Console.ReadKey();
@@ -63,7 +63,7 @@
                         }
                         else
                         {
-                            string divide = string.Format("{0} / {1} = {2}", num7, num8, Division(num7, num8));
+                            string divide = string.Format("{0} / {1} = {2}", num7, num8, Calc.Division(num7, num8));
                             Console.WriteLine(divide);
                             Console.WriteLine("Press any key to continue");
                             Console.ReadKey();
@@ -93,27 +93,11 @@ Press 9 to exit";
         }
 
 
-        static double Addition(double a, double b)
+        static double UserInput()
         {
-            return a + b;
+            double num = Convert.ToDouble(Console.ReadLine());
+            return num;
         }
 
-
-        static double Subtraction(double a, double b)
-        {
-            return a - b;
-        }
-
-
-        static double Multiplication(double a ,double b)
-        {
-            return a * b;
-        }
-
-
-        static double Division(double a, double b)
-        {
-            return (a / b);
-        }
     }
 }
